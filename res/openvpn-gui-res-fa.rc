@@ -104,7 +104,7 @@ BEGIN
     LTEXT "", ID_TXT_IP, 20, 160, 300, 10
     PUSHBUTTON "قطع اتصال", ID_DISCONNECT, 50, 190, 50, 14
     PUSHBUTTON "اتصال مجدد", ID_RESTART, 150, 190, 50, 14
-    PUSHBUTTON "De&tach", ID_DETACH, 180, 190, 50, 14, WS_DISABLED
+    PUSHBUTTON "جدا کردن", ID_DETACH, 180, 190, 50, 14, WS_DISABLED
     PUSHBUTTON "پنهان سازی", ID_HIDE, 100, 190, 50, 14
 END
 
@@ -175,7 +175,7 @@ BEGIN
     AUTORADIOBUTTON "وقت متصل بودن", ID_RB_BALLOON1, 28, 170, 50, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "وقت متصل بودن - و اتصال مجدد", ID_RB_BALLOON2, 86, 170, 90, 10
     AUTORADIOBUTTON "هرگز", ID_RB_BALLOON0, 181, 170, 40, 10
-    LTEXT "Persistent Connections", ID_TXT_PERSISTENT, 17, 185, 100, 10
+    LTEXT "اتصال مداوم", ID_TXT_PERSISTENT, 17, 185, 100, 10
     AUTORADIOBUTTON "A&uto", ID_RB_BALLOON3, 28, 200, 50, 10, WS_GROUP | WS_TABSTOP
     AUTORADIOBUTTON "&Manual", ID_RB_BALLOON4, 86, 200, 90, 10
     AUTORADIOBUTTON "&Disable", ID_RB_BALLOON5, 181, 200, 40, 10
@@ -202,34 +202,34 @@ BEGIN
     EDITTEXT ID_EDT_LOG_DIR, 53, 72, 150, 12, ES_AUTOHSCROLL
     PUSHBUTTON "…", ID_BTN_LOG_DIR, 208, 72, 25, 12
 
-    GROUPBOX "اسکریپت ایست", 203, 6, 97, 235, 60
-    LTEXT "اسکریپت ایست از قبل متصل شده :", ID_TXT_PRECONNECT_TIMEOUT, 17, 110, 100, 10
+    GROUPBOX "مهلت زمانی اسکریپت", 203, 6, 97, 235, 60
+    LTEXT "مهلت زمانی اسکریپت هنگام اتصال اولیه:", ID_TXT_PRECONNECT_TIMEOUT, 17, 110, 100, 10
     EDITTEXT ID_EDT_PRECONNECT_TIMEOUT, 103, 108, 20, 12, ES_AUTOHSCROLL|ES_NUMBER
-    LTEXT "اتصال اسکریپت ایست :", ID_TXT_CONNECT_TIMEOUT, 17, 125, 90, 10
+    LTEXT "مهلت زمانی اسکریپت در اتصال:", ID_TXT_CONNECT_TIMEOUT, 17, 125, 90, 10
     EDITTEXT ID_EDT_CONNECT_TIMEOUT, 103, 123, 20, 12, ES_AUTOHSCROLL|ES_NUMBER
-    LTEXT "قطع اتصال اسکریپت ایست :", ID_TXT_DISCONNECT_TIMEOUT, 17, 140, 90, 10
+    LTEXT "مهلت زمانی اسکریپت در قطع اتصال:", ID_TXT_DISCONNECT_TIMEOUT, 17, 140, 90, 10
     EDITTEXT ID_EDT_DISCONNECT_TIMEOUT, 103, 138, 20, 12, ES_AUTOHSCROLL|ES_NUMBER
 
     GROUPBOX "رابط مدیریت", 204, 6, 163, 235, 30
     LTEXT "پورت افست:", 205, 17, 175, 75, 10
     EDITTEXT ID_EDT_MGMT_PORT, 103, 173, 30, 12, ES_AUTOHSCROLL
 
-    GROUPBOX "نمای منوی پیکربندی", 206, 6, 198, 235, 30
-    AUTORADIOBUTTON "&Auto", ID_RB_BALLOON0, 28, 210, 50, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "&Flat", ID_RB_BALLOON1, 88, 210, 50, 10
-    AUTORADIOBUTTON "&Nested", ID_RB_BALLOON2, 148, 210, 50, 10
+    GROUPBOX "نمای منو را پیکربندی کنید", 206, 6, 198, 235, 30
+    AUTORADIOBUTTON "خودکار", ID_RB_BALLOON0, 28, 210, 50, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "تخت", ID_RB_BALLOON1, 88, 210, 50, 10
+    AUTORADIOBUTTON "تو در تو", ID_RB_BALLOON2, 148, 210, 50, 10
 
     GROUPBOX "نمایش پیام اکو", 207, 6, 233, 235, 45
-    AUTORADIOBUTTON "A&uto", ID_RB_BALLOON3, 28, 245, 50, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "Ne&ver", ID_RB_BALLOON4, 88, 245, 50, 10
-    LTEXT "پیام‌های تکراری برای موارد زیر بی‌صدا می‌شوند:", 208, 17, 260, 125, 10
+    AUTORADIOBUTTON "خودکار", ID_RB_BALLOON3, 28, 245, 50, 10, WS_GROUP | WS_TABSTOP
+    AUTORADIOBUTTON "هرگز", ID_RB_BALLOON4, 88, 245, 50, 10
+    LTEXT "پیام های تکراری بی صدا خواهند شد:", 208, 17, 260, 125, 10
     EDITTEXT ID_EDT_POPUP_MUTE, 150, 258, 30, 12, ES_AUTOHSCROLL
     LTEXT "ساعت", 209, 190, 260, 40, 10
 
 #if ENABLE_OVPN3
     GROUPBOX "موتور OpenVPN", ID_RB_ENGINE_SELECTION, 6, 283, 235, 30
     AUTORADIOBUTTON "OpenVPN2", ID_RB_ENGINE_OVPN2, 18, 296, 50, 10, WS_GROUP | WS_TABSTOP
-    AUTORADIOBUTTON "OpenVPN3 (experimental)", ID_RB_ENGINE_OVPN3, 76, 296, 90, 10
+    AUTORADIOBUTTON "OpenVPN3 (آزمایشی)", ID_RB_ENGINE_OVPN3, 76, 296, 90, 10
 #endif
 
 END
@@ -275,33 +275,33 @@ END
 /* URL Profile Import Dialog */
 ID_DLG_URL_PROFILE_IMPORT DIALOG 6, 18, 249, 95
 STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_CENTER | DS_SETFOREGROUND
-CAPTION "Import Profile from Access Server"
+CAPTION "فایل های پیکربندی را از اکسس سرور وارد کنید"
 FONT 8, "Microsoft Sans Serif"
 LANGUAGE LANG_FARSI, SUBLANG_DEFAULT
 BEGIN
     LTEXT "U&RL:", 201, 6, 9, 50, 10
     EDITTEXT ID_EDT_URL, 60, 6, 183, 12, ES_AUTOHSCROLL
-    LTEXT "&Username:", 202, 6, 26, 50, 10
+    LTEXT "نام کاربری:", 202, 6, 26, 50, 10
     EDITTEXT ID_EDT_AUTH_USER, 60, 23, 94, 12, ES_AUTOHSCROLL
-    LTEXT "&Password:", ID_LTEXT_PASSWORD, 6, 42, 50, 10
+    LTEXT "کلمه عبور:", ID_LTEXT_PASSWORD, 6, 42, 50, 10
     EDITTEXT ID_EDT_AUTH_PASS, 60, 40, 94, 12, ES_PASSWORD | ES_AUTOHSCROLL
-    AUTOCHECKBOX "&Autologin", ID_CHK_AUTOLOGIN, 6, 59, 100, 10
-    PUSHBUTTON "&OK", IDOK, 20, 76, 50, 14, BS_PUSHBUTTON | WS_TABSTOP | WS_DISABLED
-    PUSHBUTTON "&Cancel", IDCANCEL, 90, 76, 52, 14
+    AUTOCHECKBOX "ورود خودکار", ID_CHK_AUTOLOGIN, 6, 59, 100, 10
+    PUSHBUTTON "بسیار خوب", IDOK, 20, 76, 50, 14, BS_PUSHBUTTON | WS_TABSTOP | WS_DISABLED
+    PUSHBUTTON "لفو", IDCANCEL, 90, 76, 52, 14
 END
 
 /* Query PKCS11-ID Dialog */
 ID_DLG_PKCS11_QUERY DIALOGEX 6, 18, 340, 242
 STYLE WS_SIZEBOX| WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_CENTER | DS_SETFONT
-CAPTION "Select Certificate"
+CAPTION "گواهی را انتخاب کنید"
 FONT 8, "Segoe UI"
 LANGUAGE LANG_FARSI, SUBLANG_DEFAULT
 BEGIN
-    LTEXT "PKCS11 Certificates available:", ID_TXT_PKCS11, 17, 12, 171, 12
+    LTEXT "گواهی PKCS11 موجود است", ID_TXT_PKCS11, 17, 12, 171, 12
     CONTROL "", ID_LVW_PKCS11, "SysListView32", LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP, 17, 25, 171,150
-    PUSHBUTTON "&OK", IDOK, 20, 200, 50, 14, BS_DEFPUSHBUTTON | WS_TABSTOP
-    PUSHBUTTON "&Cancel", IDCANCEL, 90, 200, 50, 14, BS_PUSHBUTTON | WS_TABSTOP
-    PUSHBUTTON "&Retry", IDRETRY, 160, 200, 50, 14, BS_PUSHBUTTON | WS_TABSTOP
+    PUSHBUTTON "بسیار خوب", IDOK, 20, 200, 50, 14, BS_DEFPUSHBUTTON | WS_TABSTOP
+    PUSHBUTTON "لغو", IDCANCEL, 90, 200, 50, 14, BS_PUSHBUTTON | WS_TABSTOP
+    PUSHBUTTON "دوباره امتحان کنید", IDRETRY, 160, 200, 50, 14, BS_PUSHBUTTON | WS_TABSTOP
     LTEXT "", ID_TXT_WARNING, 6, 222, 190, 10
 END
 
@@ -314,21 +314,21 @@ BEGIN
     IDS_TIP_DEFAULT "رابط گرافیکی OpenVPN "
     IDS_TIP_CONNECTED "\nاتصال به: "
     IDS_TIP_CONNECTING "\nدر حال اتصال به: "
-    IDS_TIP_CONNECTED_SINCE "\nمتصل شده به: "
-    IDS_TIP_ASSIGNED_IP "\nآی پی اختصاصی: %ls"
+    IDS_TIP_CONNECTED_SINCE "\nاتصال از: "
+    IDS_TIP_ASSIGNED_IP "\nIP اختصاص داده شده: %ls"
     IDS_MENU_SERVICE "سرویس OpenVPN"
-    IDS_MENU_IMPORT "Import"
-    IDS_MENU_IMPORT_AS "Import from Access Server..."
-    IDS_MENU_IMPORT_URL "Import from URL…"
-    IDS_MENU_IMPORT_FILE "وارد کردن فایل..."
+    IDS_MENU_IMPORT "وارد كردن"
+    IDS_MENU_IMPORT_AS "وارد کردن از سرور اکسس..."
+    IDS_MENU_IMPORT_URL "وارد کردن از URL..."
+    IDS_MENU_IMPORT_FILE "فایل پیکربندی وارد کنید"
     IDS_MENU_SETTINGS "تنظیمات..."
     IDS_MENU_CLOSE "خروج"
     IDS_MENU_CONNECT "اتصال"
     IDS_MENU_DISCONNECT "قطع اتصال"
     IDS_MENU_RECONNECT "اتصال مجدد"
     IDS_MENU_STATUS "نمایش وضعیت"
-    IDS_MENU_VIEWLOG "دیدن گزارش"
-    IDS_MENU_EDITCONFIG "ویرایش پیکربندی"
+    IDS_MENU_VIEWLOG "نمایش گزارش"
+    IDS_MENU_EDITCONFIG "ویرایش فایل پیکربندی"
     IDS_MENU_PASSPHRASE "تغییر رمزعبور"
     IDS_MENU_CLEARPASS  "پاکسازی رمزعبور نگهداری شده"
     IDS_MENU_SERVICE_START "شروع"
@@ -337,18 +337,18 @@ BEGIN
     IDS_MENU_SERVICEONLY_START "اتصال"
     IDS_MENU_SERVICEONLY_STOP "قطع اتصال"
     IDS_MENU_SERVICEONLY_RESTART "اتصال مجدد"
-    IDS_MENU_ASK_STOP_SERVICE "میخواهید اتصال را قطع کنید - سرویس متوقف شود؟"
+    IDS_MENU_ASK_STOP_SERVICE "آیا می خواهید اتصال را قطع کنید (سرویس OpenVPN را متوقف کنید)؟"
 
     /* Logviewer – Resources */
-    IDS_ERR_START_LOG_VIEWER "خطای شروع شدن نمایشگر-گزارش: %ls"
-    IDS_ERR_START_CONF_EDITOR "خطای شروع شدن ویرایشگر-پیکربندی: %ls"
+    IDS_ERR_START_LOG_VIEWER "نمایشگر فایل گزارش شروع به کار نکرد: %ls"
+    IDS_ERR_START_CONF_EDITOR "ویرایشگر فایل پیکربندی شروع نشد: %ls"
 
     /* OpenVPN */
-    IDS_ERR_MANY_CONFIGS "OpenVPN GUI پشتیبانی نمی کند بیشتر از %d پیکربندی. لطفا برای اطلاعات بیشتر با مدیر تماس بگیرید."
-    IDS_NFO_NO_CONFIGS "پروفایل اتصال قابل خواندن نیست (فایل پیکربندی) شناخته شد.\n\
-به کار ببرید ""وارد کردن سند"" در منو را یا کپی کنید فایل کانفیگ را در ""%ls"" or ""%ls""."
-    IDS_ERR_CONFIG_NOT_AUTHORIZED "این اتصال شروع شد (%ls) نیاز دارد به عضویت در گروه\
-""%ls"" .با مدیر سیستم خود تماس بگیرید\n"
+    IDS_ERR_MANY_CONFIGS "رابط کاربری گرافیکی OpenVPN بیش از %d نمایه اتصال گروهی را پشتیبانی نمی کند. در صورت نیاز، لطفا با نویسنده تماس بگیرید"
+    IDS_NFO_NO_CONFIGS "هیچ نمایه اتصال قابل خواندن یافت نشد. \n\
+لطفاً از منوی "وارد کردن نمایه..." استفاده کنید یا نمایه را در " % ls" یا " % ls" کپی کنید."
+    IDS_ERR_CONFIG_NOT_AUTHORIZED "عضویت در گروه '%ls' برای شروع این اتصال (%ls) لازم است. \
+لطفا با سرپرست سیستم خود تماس بگیرید. \n"
     IDS_ERR_CONFIG_TRY_AUTHORIZE  "این اتصال شروع شد (%ls) نیاز دارد به عضویت در گروه\
 ""%ls"" .\n\n\
 می خواهی اضافه کنی خودت به این گروه?\n\
