@@ -344,10 +344,10 @@ BEGIN
     IDS_ERR_START_CONF_EDITOR "ویرایشگر فایل پیکربندی شروع نشد: %ls"
 
     /* OpenVPN */
-    IDS_ERR_MANY_CONFIGS "رابط کاربری گرافیکی OpenVPN بیش از %d نمایه اتصال گروهی را پشتیبانی نمی کند. در صورت نیاز، لطفا با نویسنده تماس بگیرید"
-    IDS_NFO_NO_CONFIGS "هیچ نمایه اتصال قابل خواندن یافت نشد. \n\
-لطفاً از منوی "وارد کردن نمایه..." استفاده کنید یا نمایه را در " % ls" یا " % ls" کپی کنید."
-    IDS_ERR_CONFIG_NOT_AUTHORIZED "عضویت در گروه '%ls' برای شروع این اتصال (%ls) لازم است. \
+    IDS_ERR_MANY_CONFIGS "رابط کاربری گرافیکی OpenVPN بیش از %d فایل پیکربندی اتصال گروهی را پشتیبانی نمی کند. در صورت نیاز، لطفا با نویسنده تماس بگیرید"
+    IDS_NFO_NO_CONFIGS "هیچ فایل پیکربندی اتصال قابل خواندن یافت نشد. \n\
+لطفاً از منوی ""وارد کردن فایل پیکربندی..."" استفاده کنید یا فایل پیکربندی را در ""%ls"" یا ""%ls""کپی کنید."
+    IDS_ERR_CONFIG_NOT_AUTHORIZED "عضویت در گروه ""%ls"" برای شروع این اتصال (%ls) لازم است. \
 لطفا با سرپرست سیستم خود تماس بگیرید. \n"
     IDS_ERR_CONFIG_TRY_AUTHORIZE  "این اتصال شروع شد (%ls) نیاز دارد به عضویت در گروه\
 ""%ls"" .\n\n\
@@ -526,7 +526,7 @@ Use openvpn-gui --help for more info."
 
     /* registry */
     IDS_ERR_GET_WINDOWS_DIR "خطا در دریافت دایرکتوری ویندوز."
-    IDS_ERR_GET_PROFILE_DIR "خطا در دریافت فهرست نمایه کاربر."
+    IDS_ERR_GET_PROFILE_DIR "خطا در دریافت فهرست فایل پیکربندی کاربر."
     IDS_ERR_GET_PROGRAM_DIR " خطا در دریافت نام پوشه ""Program"" ."
     IDS_ERR_OPEN_REGISTRY "خطا در باز کردن رجیستری برای خواندن (HKLM\\SOFTWARE\\OpenVPN).\n \
 OpenVPN احتمالا نصب نشده است"
@@ -547,33 +547,33 @@ OpenVPN احتمالا نصب نشده است"
     IDS_ERR_IMPORT_FAILED "وارد کردن فایل انجام نشد. مسیر زیر ایجاد نشد.\n\n\ %ls\n\nمطمئن شوید که مجوزهای مناسب را دارید."
     IDS_NFO_IMPORT_SUCCESS "فایل با موفقیت وارد شد."
     IDS_NFO_IMPORT_OVERWRITE "یک پیکربندی به نام ""%ls"" از قبل وجود دارد. آیا می خواهی جایگزین کنی؟"
-    IDS_NFO_IMPORT_SOURCE "آیا می خواهید نمایه <%ls> را وارد کنید؟?"
+    IDS_NFO_IMPORT_SOURCE "آیا می خواهید فایل پیکربندی <%ls> را وارد کنید؟?"
     IDS_ERR_IMPORT_SOURCE "نمی توان فایل <%ls> را وارد کرد زیرا از قبل در فهرست پیکربندی جهانی یا محلی است"
     IDS_ERR_IMPORT_ACCESS "نمی‌توان <%ls> را وارد کرد زیرا وجود ندارد یا قابل خواندن نیست"
 
     /* save/delete password */
-    IDS_NFO_DELETE_PASS "بسیار خوب (OK) را بزن تا رمز عبور ذخیره شده برای پیکر بندی حذف شود ""%ls"""
+    IDS_NFO_DELETE_PASS "لطفاً تأیید را فشار دهید تا رمز عبور ذخیره شده برای فایل پیکربندی اتصال ""%ls"" حذف شود."
 
     /* Token password related */
-    IDS_NFO_TOKEN_PASSWORD_CAPTION "OpenVPN – رمز نشان"
-    IDS_NFO_TOKEN_PASSWORD_REQUEST "ورودی رمزعبور/رمز برای نشان '%hs'"
+    IDS_NFO_TOKEN_PASSWORD_CAPTION "OpenVPN – رمز توکن"
+    IDS_NFO_TOKEN_PASSWORD_REQUEST "لطفا رمز عبور یا پین رمز '%hs' را وارد کنید"
 
     IDS_NFO_AUTH_PASS_RETRY "مدارک اشتباه است. مجددا تلاش کنید…"
-    IDS_NFO_KEY_PASS_RETRY  "پسورد اشتباه است. مجددا تلاش کنید…"
-    IDS_ERR_INVALID_PASSWORD_INPUT "کاراکتر غیر مجاز در رمز عبور"
-    IDS_ERR_INVALID_USERNAME_INPUT "کاراکتر غیر مجاز در نام کاربری"
+    IDS_NFO_KEY_PASS_RETRY  "رمز عبور اشتباه لطفا دوباره تلاش کنید..."
+    IDS_ERR_INVALID_PASSWORD_INPUT "کاراکترهای نامعتبر در رمز عبور"
+    IDS_ERR_INVALID_USERNAME_INPUT "کاراکترهای نامعتبر در نام کاربری"
     IDS_NFO_AUTO_CONNECT    "اتصال خودکار در %u ثانیه آینده…"
-    IDS_NFO_CLICK_HERE_TO_START "OpenVPN GUI قبلا باز شده. کلیک راست کنید بر روی آن در نماد های برنامه ها."
-    IDS_NFO_BYTECOUNT "بایت به: %ls  خروج: %ls"
+    IDS_NFO_CLICK_HERE_TO_START "OpenVPN GUI در حال اجرا است. برای شروع روی نماد نوار وظیفه کلیک راست کنید."
+    IDS_NFO_BYTECOUNT "بایت های دریافتی: %ls بایت های ارسالی: %ls"
 
     /* AS profile import */
-    IDS_ERR_URL_IMPORT_PROFILE "خطا در واکشی نمایه از URL: [%d] %ls"
+    IDS_ERR_URL_IMPORT_PROFILE "خطا در واکشی فایل پیکربندی از URL: [%d] %ls"
 
-    IDS_ERR_NO_PKCS11 "هیچ گواهی یافت نشد اگر نشانه ای دارید آن را وارد کنید و دوباره امتحان کنید."
+    IDS_ERR_NO_PKCS11 "گواهی پیدا نشد اگر توکنی دارید، آن را وارد کنید و دوباره امتحان کنید."
     IDS_ERR_SELECT_PKCS11 "هیچ گواهی انتخاب نشده است."
     /* column headers for pkcs11 certificate list */
     IDS_CERT_DISPLAYNAME "صادر شده به"
-    IDS_CERT_ISSUER "صادر شده توسط"
+    IDS_CERT_ISSUER "مرجع صادر کننده"
     IDS_CERT_NOTAFTER "معتبر است تا"
 
 END
